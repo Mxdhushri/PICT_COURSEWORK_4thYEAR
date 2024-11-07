@@ -51,7 +51,7 @@ int main() {
        cin>>wt[i];
     }
 
-    vector<int> val;
+    vector<int> val(n);
     cout<<"enter values"<<endl;
     for(int i=0;i<n;i++)
     {
