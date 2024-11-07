@@ -2,13 +2,13 @@ import random
 import string
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-def generate_captcha_text(length=6):
+def generate_captcha_text(length=6): #input length of text 6 letters/words eg:A1D232
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
 
-def generate_captcha_image(captcha_text):
+def generate_captcha_image(captcha_text):  #seperate image file is created
     width, height = 150, 50
-    background_color = (255, 255, 255)
-    font_color = (0, 0, 0)
+    background_color = (255, 255, 255)  #white hoga background
+    font_color = (0, 0, 0)              #black hoga text
     font_size = 40
 
     image = Image.new('RGB', (width, height), background_color)
@@ -43,7 +43,7 @@ def verify_captcha():
 
     user_input = input("Enter the CAPTCHA text shown in the image: ")
 
-    if user_input == captcha_text:
+    if user_input == captcha_text: # our input should be equal to captcha generated just like in online websites
         print("CAPTCHA verification successful!")
     else:
         print("CAPTCHA verification failed.")

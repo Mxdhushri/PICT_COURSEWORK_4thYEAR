@@ -1,10 +1,10 @@
 import email
 
-f = open('D://folder//mail.eml')
+f = open('D://folder//mail.eml') #download a particular emails eml file
 msg = email.message_from_file(f)
 f.close()
 
-parser = email.parser.HeaderParser()
+parser = email.parser.HeaderParser()     
 headers = parser.parsestr(msg.as_string())
 
 print('Headers Found: ')
