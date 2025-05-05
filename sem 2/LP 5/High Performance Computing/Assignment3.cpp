@@ -3,7 +3,7 @@
 using namespace std;
 using namespace std::chrono;
 
-// Sequential computation
+// Sequential computation //error1: & (and percentile) was missing for avg
 void sequential_operations(vector<int> &arr, int &min_val, int &max_val, long long &sum, double &avg)
 {
     min_val = *min_element(arr.begin(), arr.end());

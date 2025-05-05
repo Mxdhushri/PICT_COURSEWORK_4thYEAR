@@ -9,7 +9,7 @@ class Graph
     vector<vector<int>> adj; //adjacency list
 
 public:
-    Graph(int V)
+    Graph(int V) //constructor
     {
         this->V = V;         // initializes no.of vertices
         adj.resize(V);
